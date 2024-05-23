@@ -20,6 +20,7 @@ public class InputNumbersTest {
     @Test
     public void shouldReturnLengthOfUserInput() {
         //given
+//        InputNumbers inputNumbers = new InputNumbers();
         provideInput("6");
         //when
         String input = InputNumbers.getNumberOfInputs();

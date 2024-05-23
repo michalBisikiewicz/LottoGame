@@ -8,14 +8,15 @@ public class RandomNumbers {
     public static List<Integer> values = new ArrayList<>();
 
     public static void main(String[] args) {
-        getRandomListWithNumbers();
+        RandomNumbers randomNumbers = new RandomNumbers();
+        randomNumbers.getRandomListWithNumbers();
     }
 
-    public static int getRandomNumber(int min_range, int max_range) {
-        return (int)(min_range + (Math.random() * (max_range - min_range)));
+    public int getRandomNumber(int minRange, int maxRange) {
+        return (int)(minRange + (Math.random() * (maxRange - minRange)));
     }
 
-    public static void getRandomListWithNumbers() {
+    public void getRandomListWithNumbers() {
         Scanner scanner =  new Scanner(System.in);
 
         System.out.println("Enter amount of number to randomly generate:");

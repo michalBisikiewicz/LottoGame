@@ -10,8 +10,9 @@ public class InputNumbers {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        InputNumbers inputNumbers = new InputNumbers();
         getNumberOfInputs();
-        getNumbersFromUser();
+        inputNumbers.getNumbersFromUser();
     }
 
     public static String getNumberOfInputs() {
@@ -20,7 +21,7 @@ public class InputNumbers {
         return numberOfUserInputs;
     }
 
-    public static void getNumbersFromUser() {
+    public void getNumbersFromUser() {
         String key;
         int counter = 0;
         int amount = Integer.parseInt(numberOfUserInputs);

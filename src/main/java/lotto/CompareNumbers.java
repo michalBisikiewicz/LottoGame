@@ -4,7 +4,7 @@ import java.util.List;
 
 public class CompareNumbers {
 
-    public static void listAreEqual(List list1, List list2) {
+    public void listAreEqual(List list1, List list2) {
         if (list1.equals(list2)) {
             System.out.println("Numbers are matched!");
         } else {
