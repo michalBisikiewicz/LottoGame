@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class InputNumbers {
-    public static List<Integer> userNumbers = new ArrayList<>();
+    public List<Integer> userNumbers = new ArrayList<>();
     public static String numberOfUserInputs;
-    public static Scanner scanner = new Scanner(System.in);
+    public Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         InputNumbers inputNumbers = new InputNumbers();
-        getNumberOfInputs();
+        inputNumbers.getNumberOfInputs();
         inputNumbers.getNumbersFromUser();
     }
 
-    public static String getNumberOfInputs() {
+    public String getNumberOfInputs() {
         System.out.println("Please enter number of inputs.");
         numberOfUserInputs = scanner.nextLine();
         return numberOfUserInputs;

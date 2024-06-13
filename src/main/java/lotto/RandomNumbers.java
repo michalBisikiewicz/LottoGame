@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static lotto.InputNumbers.numberOfUserInputs;
+
 public class RandomNumbers {
-    public static List<Integer> values = new ArrayList<>();
+    List<Integer> values = new ArrayList<>();
 
     public static void main(String[] args) {
         RandomNumbers randomNumbers = new RandomNumbers();
-        randomNumbers.getRandomListWithNumbers();
+        randomNumbers.start();
     }
 
     public int getRandomNumber(int minRange, int maxRange) {
@@ -18,9 +20,10 @@ public class RandomNumbers {
 
     public void getRandomListWithNumbers() {
         Scanner scanner =  new Scanner(System.in);
+        String amountOfUserInputs = numberOfUserInputs;
 
-        System.out.println("Enter amount of number to randomly generate:");
-        int quantity = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Enter amount of number to randomly generate:");
+        int quantity = Integer.parseInt(amountOfUserInputs);
         System.out.println("Enter min. value:");
         int min_range = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter max. value:");
@@ -30,5 +33,9 @@ public class RandomNumbers {
             values.add(getRandomNumber(min_range, max_range));
         }
         System.out.println(values);
+    }
+
+    public void start() {
+        getRandomListWithNumbers();
     }
 }
